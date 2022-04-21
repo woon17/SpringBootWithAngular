@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.dxc.SpringWithDB.entity.Book;
-import com.dxc.SpringWithDB.repository.BookIRepository;
+import com.dxc.SpringWithDB.repository.BookRepository;
 
 @Component
 public class BookServices {
 	@Autowired
-	private BookIRepository br;
+	private BookRepository br;
 
 	public List<Book> getAllBooks() {
 		List<Book> bookList = (List<Book>) br.findAll();
