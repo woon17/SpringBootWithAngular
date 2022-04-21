@@ -18,18 +18,18 @@ public class Book {
 	@Column(name = "TITLE")
 	private String title;
 
-	@Column(name = "AUTHER")
-	private String auther;
+	@Column(name = "AUTHOR")
+	private String author;
 
 	public Book() {
 
 	}
 
-	public Book(int id, String title, String auther) {
+	public Book(int id, String title, String author) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.auther = auther;
+		this.author = author;
 	}
 
 	public int getId() {
@@ -48,17 +48,17 @@ public class Book {
 		this.title = title;
 	}
 
-	public String getAuther() {
-		return auther;
+	public String getAuthor() {
+		return author;
 	}
 
-	public void setAuther(String auther) {
-		this.auther = auther;
+	public void setAuther(String author) {
+		this.author = author;
 	}
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", auther=" + auther + "]";
+		return "Book [id=" + id + ", title=" + title + ", auther=" + author + "]";
 	}
 
 }
