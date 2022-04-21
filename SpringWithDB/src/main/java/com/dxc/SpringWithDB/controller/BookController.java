@@ -3,6 +3,7 @@ package com.dxc.SpringWithDB.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import com.dxc.SpringWithDB.entity.Book;
 import com.dxc.SpringWithDB.services.BookServices;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200/")
 public class BookController {
 	// Injection for BookServices
 	@Autowired
