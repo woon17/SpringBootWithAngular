@@ -17,4 +17,10 @@ export class BookService {
   getBooks():Observable<Book[]>{
     return this.http.get<Book[]>(`${this.baseUrl}`);
   }
+
+  getBookById(id:number | undefined):Observable<Book>{
+    console.log("id: " + id);
+    return this.http.get<Book>(`${this.baseUrl}/${id}`);
+  }
+
 }

@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http'; // import and need to a
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
+import { BookByIdComponent } from './book-by-id/book-by-id.component';
 
 @NgModule({
-  declarations: [AppComponent, BookComponent],
+  declarations: [AppComponent, BookComponent, BookByIdComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

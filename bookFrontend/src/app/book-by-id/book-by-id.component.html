@@ -1,0 +1,24 @@
+<p>book-by-id works!</p>
+<h1>The list of books</h1>
+<div class="container">
+  <div class="card">
+
+    <div class="card-body">
+      <table border="1px" class="table">
+        <thead>
+          <th>Book ID</th>
+          <th>Book Title</th>
+          <th>Book Author</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <button (click)="bookDetail(book.id)" class="btn btn-info btn-detail" style="margin-left: 10px">Details</button>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
