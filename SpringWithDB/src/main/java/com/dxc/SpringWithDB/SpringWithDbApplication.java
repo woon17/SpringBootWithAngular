@@ -8,6 +8,7 @@ public class SpringWithDbApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringWithDbApplication.class, args);
+		System.out.println("SpringWithDB project is running");
 	}
 
 }

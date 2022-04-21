@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+//This is my entity class with variables mapped to column names in the table
 @Entity
 @Table(name = "BOOK")
 public class Book {
@@ -20,11 +20,12 @@ public class Book {
 
 	@Column(name = "AUTHOR")
 	private String author;
-
+	
+	// zero parameterized constructor
 	public Book() {
 
 	}
-
+	// parameterized constructor
 	public Book(int id, String title, String author) {
 		super();
 		this.id = id;
