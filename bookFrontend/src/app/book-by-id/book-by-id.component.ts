@@ -19,17 +19,27 @@ export class BookByIdComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.fetchList();
+  }
+
+  fetchList() {
     this.bookservice.getBooks().subscribe((data: Book[]) => {
       console.log(data);
       this.books = data;
     });
   }
 
-  bookDetail(id: number | undefined){
+  bookDetail(id: number | undefined) {
     this.bookservice.getBookById(id).subscribe((data: Book) => {
-      console.log(data);
       this.book = data;
     });
   }
 
+  deleteBook(id: number | undefined) {
+    this.bookservice.deleteBookById(id).subscribe(() => {
+      this.fetchList();
+      this.book=undefined;
+      console.log('user deleted');
+    });
+  }
 }
