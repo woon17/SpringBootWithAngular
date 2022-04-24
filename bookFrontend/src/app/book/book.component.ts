@@ -10,6 +10,7 @@ import { BookService } from '../book.service';
 })
 export class BookComponent implements OnInit {
   books: Book[] | undefined;
+  book: Book | undefined;
 
   constructor(private bookservice: BookService, private router: Router) {}//inject router in constructor
 
@@ -27,5 +28,13 @@ export class BookComponent implements OnInit {
   // 2. do routing,
   updateBook(id: number | undefined) {
     this.router.navigate(["update-book", id]);
+  }
+
+  deleteBook(id: number | undefined) {
+    this.bookservice.deleteBookById(id).subscribe(() => {
+      this.fetchList();
+      this.book=undefined;
+      console.log('book deleted');
+    });
   }
 }
